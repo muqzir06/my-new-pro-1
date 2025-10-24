@@ -80,7 +80,7 @@
             color: #87ceeb;
             text-shadow: 0 0 5px #00c3ff;
             letter-spacing: 1px;
-            margin-top: 0.5rem;
+            margin-top: 0.2rem;
             padding: 0.5rem 1rem;
             background: rgba(0, 195, 255, 0.1);
             border-radius: 10px;
@@ -319,6 +319,101 @@
                 font-size: 0.9rem;
             }
         }
+
+/* Mobile-S: very small phones (<=360px) */
+@media (max-width: 360px) {
+    .container { padding: 0.9rem; border-radius: 12px; max-width: 100%; }
+    .clock-container { margin-bottom: 0.6rem; }
+    .heading { font-size: 1.8rem; letter-spacing: 1.5px; animation: none; text-shadow: none; -webkit-text-fill-color: currentColor; }
+    .time { font-size: 2.8rem; letter-spacing: 1.5px; margin-bottom: 0.4rem; }
+    .date { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .day { font-size: 0.85rem; padding: 0.35rem 0.6rem; }
+    .controls { gap: 0.5rem; margin-top: 0.8rem; }
+    .btn { padding: 0.45rem 0.75rem; font-size: 0.95rem; min-height: 44px; border-radius: 36px; }
+    .settings-panel { width: 94%; max-width: 320px; padding: 0.9rem; }
+    .slider::-webkit-slider-thumb { width: 16px; height: 16px; }
+    .floating-elements { display: none; } /* save battery & reduce jank */
+    .time, .heading, .date, .day { transition: none; }
+}
+
+/* Mobile-M: medium phones (~361px–412px) */
+@media (min-width: 361px) and (max-width: 412px) {
+    .container { padding: 1.15rem; border-radius: 14px; }
+    .clock-container { margin-bottom: 1rem; }
+    .heading { font-size: 2.2rem; letter-spacing: 2px; animation: glow 3s linear infinite; }
+    .time { font-size: 3.6rem; letter-spacing: 2.5px; margin-bottom: 0.6rem; }
+    .date { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .day { font-size: 1rem; padding: 0.4rem 0.75rem; }
+    .controls { gap: 0.7rem; margin-top: 1rem; }
+    .btn { padding: 0.55rem 1rem; font-size: 0.98rem; min-height: 46px; border-radius: 40px; }
+    .settings-panel { width: 92%; max-width: 360px; padding: 1rem; }
+    .slider::-webkit-slider-thumb { width: 17px; height: 17px; }
+    .floating-elements { display: none; } /* optional: enable if performance is fine */
+}
+
+/* Mobile-L: large phones (>=413px and <=480px) */
+@media (min-width: 413px) and (max-width: 480px) {
+    .container { padding: 1.35rem; border-radius: 16px; max-width: 100%; }
+    .clock-container { margin-bottom: 1.25rem; }
+    .heading { font-size: 2.6rem; letter-spacing: 2.5px; }
+    .time { font-size: 4.2rem; letter-spacing: 3px; margin-bottom: 0.8rem; }
+    .date { font-size: 1.15rem; margin-bottom: 0.4rem; }
+    .day { font-size: 1.05rem; padding: 0.45rem 0.9rem; }
+    .controls { gap: 0.9rem; margin-top: 1.2rem; }
+    .btn { padding: 0.65rem 1.15rem; font-size: 1rem; min-height: 48px; border-radius: 44px; }
+    .settings-panel { width: 90%; max-width: 420px; padding: 1.15rem; }
+    .slider::-webkit-slider-thumb { width: 18px; height: 18px; }
+    .floating-elements { display: block; } /* allow subtle visual on larger phones */
+    .floating-element { opacity: 0.12; } /* reduce visual weight on mobile-L */
+}
+
+/* Mobile-S: very small phones (<=360px) */
+@media (max-width: 360px) {
+    .container { padding: 0.9rem; border-radius: 12px; max-width: 100%; }
+    .clock-container { margin-bottom: 0.6rem; }
+    .heading { font-size: 1.8rem; letter-spacing: 1.5px; animation: none; text-shadow: none; -webkit-text-fill-color: currentColor; }
+    .time { font-size: 2.8rem; letter-spacing: 1.5px; margin-bottom: 0.4rem; }
+    .date { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .day { font-size: 0.85rem; padding: 0.35rem 0.6rem; }
+    .controls { gap: 0.5rem; margin-top: 0.8rem; }
+    .btn { padding: 0.45rem 0.75rem; font-size: 0.95rem; min-height: 44px; border-radius: 36px; }
+    .settings-panel { width: 94%; max-width: 320px; padding: 0.9rem; }
+    .slider::-webkit-slider-thumb { width: 16px; height: 16px; }
+    .floating-elements { display: none; } /* save battery & reduce jank */
+    .time, .heading, .date, .day { transition: none; }
+}
+
+/* Mobile-M: medium phones (~361px–412px) */
+@media (min-width: 361px) and (max-width: 412px) {
+    .container { padding: 1.15rem; border-radius: 14px; }
+    .clock-container { margin-bottom: 1rem; }
+    .heading { font-size: 2.2rem; letter-spacing: 2px; animation: glow 3s linear infinite; }
+    .time { font-size: 3.6rem; letter-spacing: 2.5px; margin-bottom: 0.6rem; }
+    .date { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .day { font-size: 1rem; padding: 0.4rem 0.75rem; }
+    .controls { gap: 0.7rem; margin-top: 1rem; }
+    .btn { padding: 0.55rem 1rem; font-size: 0.98rem; min-height: 46px; border-radius: 40px; }
+    .settings-panel { width: 92%; max-width: 360px; padding: 1rem; }
+    .slider::-webkit-slider-thumb { width: 17px; height: 17px; }
+    .floating-elements { display: none; } /* optional: enable if performance is fine */
+}
+
+/* Mobile-L: large phones (>=413px and <=480px) */
+@media (min-width: 413px) and (max-width: 480px) {
+    .container { padding: 1.35rem; border-radius: 16px; max-width: 100%; }
+    .clock-container { margin-bottom: 1.25rem; }
+    .heading { font-size: 2.6rem; letter-spacing: 2.5px; }
+    .time { font-size: 4.2rem; letter-spacing: 3px; margin-bottom: 0.8rem; }
+    .date { font-size: 1.15rem; margin-bottom: 0.4rem; }
+    .day { font-size: 1.05rem; padding: 0.45rem 0.9rem; }
+    .controls { gap: 0.9rem; margin-top: 1.2rem; }
+    .btn { padding: 0.65rem 1.15rem; font-size: 1rem; min-height: 48px; border-radius: 44px; }
+    .settings-panel { width: 90%; max-width: 420px; padding: 1.15rem; }
+    .slider::-webkit-slider-thumb { width: 18px; height: 18px; }
+    .floating-elements { display: block; } /* allow subtle visual on larger phones */
+    .floating-element { opacity: 0.12; } /* reduce visual weight on mobile-L */
+}
+        
     </style>
 </head>
 <body>
